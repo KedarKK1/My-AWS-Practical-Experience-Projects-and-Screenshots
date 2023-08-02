@@ -1,7 +1,7 @@
 # Screenshots (WAIT FOR LOADING GIF files) - 
 
 <img src="./Screenshots/ss1.png" alt="s3_bucket_instance">
-<img src="./Screenshots/ss3.png" alt="s3_bucket_uploaded_elements">
+<img src="./Screenshots/ss3.PNG" alt="s3_bucket_uploaded_elements">
 <img src="./Screenshots/ss4.gif" alt="hosted_site_live">
 <img src="./Screenshots/ss8.gif" alt="2nd_folder_structure_in_live_in_same_s3_bucket">
 <img src="./Screenshots/ss7.gif" alt="2nd_hosted_site_in_live_in_same_s3_bucket">
