@@ -1,0 +1,47 @@
+html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: blue;
+	background-image: url('backgroundimages1.jpg');
+/*	background-repeat: no-repeat;*/
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	overflow: hidden;
+}
+.container{
+	top: 0;
+	color: #f1f1f1 ;
+	text-align: center;
+
+}
+.mym{
+	color: red;
+}
+.countdown{
+	display: flex;
+	transform: scale(2);
+
+}
+.time{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 15px;
+
+}
+.time h2{
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 1;
+	margin: 0 0 5px;
+}

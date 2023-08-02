@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="mystyle1.css">
+</head>
+<body>
+	<div class="container"><h3>Hello mates:</h3><br>
+		<h5>Homp you like this!<br>
+		This is <section class="mym">time remaining</section>for next-new year:</h5>
+		<div id="countdown" class="countdown">
+			<div class="time">
+				<h2 id="days">00</h2>
+				<small>days</small>
+			</div>
+			<div class="time">
+				<h2 id="hours">00</h2>
+				<small>hours</small>				
+			</div>
+			<div class="time">
+				<h2 id="minutes">00</h2>
+				<small>minutes</small>						
+			</div>
+			<div class="time">
+				<h2 id="seconds">00</h2>
+				<small>seconds</small>					
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	function countdown(){
+		var now = new Date;
+		var eventDate = new Date(2022, 11, 25);
+
+		var currentTime = now.getTime;
+		var eventTime = eventDate.getTime();
+
+		var remTime = eventTime - currentTime;
+
+		var s = Math.floor(remTime / 1000);
+		var m = Math.floor(s / 60);
+		var h = Math.floor(m / 60);
+		var d = Math.floor(h / 24);
+
+		h %= 24;
+		m %= 60;
+		s %= 60;
+
+		h = (h < 10) ? "0" + h : h;
+		m = (m < 10) ? "0" + m : m;
+		s = (s < 10) ? "0" + s : s;
+
+		document.getElementById("days").textContent = d;
+		document.getElementById("hours").textContent = h;
+		document.getElementById("minutes").textContent = m;
+		document.getElementById("seconds").textContent = s;
+	}
+	countdown();
+</script>
+</body>
+</html>

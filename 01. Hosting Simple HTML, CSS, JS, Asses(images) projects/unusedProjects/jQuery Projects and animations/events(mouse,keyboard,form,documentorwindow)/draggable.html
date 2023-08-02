@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Here i have included jquery.ui.js cdn here -->
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#dragsquare").draggable();
+                });
+            });/*callback function helps for animation to complete and then alert comes up. Useful for animation sequencing  
+            if you wish to see its use, remove function() at the end, both the processes will be at same time asynchronomous */
+    </script>
+    <style>
+        #dragsquare{
+            background: yellow;
+            height: 150px;
+            width: 150px;
+            margin-top: 5px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragsquare"></div>
+</body>
+</html>

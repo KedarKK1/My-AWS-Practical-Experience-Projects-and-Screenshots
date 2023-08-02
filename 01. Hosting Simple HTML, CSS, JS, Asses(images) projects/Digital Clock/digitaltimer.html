@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			background-image: url('./assets/images/backgrn.jpg');
+			color: white;
+			text-align: center;
+		}
+		.clock{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			font-size: 50px;
+			border: 5px #ccc;
+			border-style: outset ridge;
+			border-radius: 10px;
+			padding: 05px 20px 05px 20px;
+		}
+	</style>
+	<title>Js- Digital Clock</title>
+</head>
+<body>
+
+	<div id="MyClockDisplay" class="clock"></div>
+	<h1>Created By Kedar Koshti</h1>
+	<script type="text/javascript">
+		function showTime(){
+			var date = new Date();
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			var sessions = "AM"
+			
+			if(h==0){
+				h = 12;
+			}
+
+			if(h>12){
+				h = h - 12;
+				sessions = "PM"
+			}
+
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+
+			var time = h + " : " + m + " : " + s + " " + sessions ;
+			document.getElementById('MyClockDisplay').innerText = time;
+			document.getElementById('MyClockDisplay').textContent = time;
+
+			setTimeout(showTime,1000);
+		}
+		showTime();
+	</script>
+</body>
+</html>

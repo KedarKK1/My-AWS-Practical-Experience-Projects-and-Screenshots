@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glacier meltdowm-countdown</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	body{
+		background-image: url('backgroundimages1.jpg');
+		background-size: cover;
+		height: 100vh;
+		background-position: center center;
+		}
+	.countdownContainer{
+		color: white;
+		font-size: 25px;
+		font-weight: 1000;
+		text-align: center;
+/*		border: 1px solid white;
+		border-radius: 20px;*/
+		padding: 10px;
+/*		margin: 10px;*/
+/*		border-width: 4px 20px;*/
+/*		box-sizing: content-box;*/
+/*		box-shadow: 3px 4px 5px 3px ghostwhite;*/
+		background-attachment: fixed;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		overflow: hidden;
+
+/*		position: absolute;
+		top: 10%;
+		left: 30%;
+transform: translateX(-50%) translateY(-50%);*/
+	}	
+	h2{
+		margin-top: 10px;
+		color: blue;
+		text-align: center;
+	}
+	section{
+		margin: 20px;
+		color: #ff3300;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 1000;
+	}
+	table, td, th{
+		border-collapse: separate;
+		border-spacing: 10px 10px;
+		padding: 5px;
+	}
+
+	</style>
+</head>
+<body>
+	<h2>Hellow word</h2><br>
+	<table class="countdownContainer">
+		<tr>
+			<td colspan="4">Glacier meltdown-Countdown</td>
+		</tr>
+		<tr>
+			<td id="days">120:</td>
+			<td id="hours">4:</td>
+			<td id="minutes">25:</td>
+			<td id="seconds">28:</td>
+		</tr>
+		<tr>
+			<td>Days</td>
+			<td>Hours</td>
+			<td>Minutes</td>
+			<td>Seconds</td>
+		</tr>
+	</table>
+	<section>Well, prepare for end of this beautiful world!!!</section>
+	<script type="text/javascript">
+		function countdown(){
+			var now = new Date();
+			var eventDate = new Date(2021, 11, 2);//put any random date here//yyyy, mm, dd, time
+
+			var currentTiime = now.getTime();
+			var eventTime = eventDate.getTime();
+
+			var remTime = eventTime - currentTiime;
+
+			var s = Math.floor(remTime / 1000);
+			var m = Math.floor(s / 60);
+			var h = Math.floor(m / 60);
+			var d = Math.floor(h / 24);
+
+			h %= 24;
+			m %= 60;
+			s %= 60;
+
+			h = (h < 10) ? "0" + h : h;
+			m = (m < 10) ? "0" + m : m;
+			s = (s < 10) ? "0" + s : s;
+
+			document.getElementById("days").textContent = d;
+/*			document.getElementById("days").innerText = d;*/
+
+			document.getElementById("hours").textContent = h;
+			document.getElementById("minutes").textContent = m;
+			document.getElementById("seconds").textContent = s;
+
+			setTimeout(countdown, 1000);
+		}
+		countdown();
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #f1f5f8;
+	color: gold;
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+}
+.borderherr{
+	border: 10px gold;
+	border-style: inset;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 5px;
+}
+
+.nav-center{
+	text-align: center;
+}
+
+.container{
+	text-align: center;
+}
