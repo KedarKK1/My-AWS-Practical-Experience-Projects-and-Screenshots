@@ -1,4 +1,4 @@
-# Screenshots - 
+# Screenshots (WAIT FOR LOADING GIF files) - 
 
 <img src="./Screenshots/ss1.png" alt="s3_bucket_instance">
 <img src="./Screenshots/ss3.png" alt="s3_bucket_uploaded_elements">
