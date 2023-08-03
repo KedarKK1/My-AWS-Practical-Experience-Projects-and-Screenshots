@@ -1,2 +1,16 @@
 /01. Hosting Simple HTML, CSS, JS, Asses(images) projects/Screenshots/ss2.PNG
 /01. Hosting Simple HTML, CSS, JS, Asses(images) projects/unusedProjects/*
+
+/Private Files and Keys To Exclude
+# /Private Files and Keys To Exclude/*
+
+/.gitignore
+/.gitignore/
+/.gitignore/*
+/gitignore
+
+# below line will ignore any node_modules in any subdirectories/submodules in our project 
+node_modules/ 
+.env
+# below line will ignore any .env file in any subdirectories/submodules in our project 
+**/.env

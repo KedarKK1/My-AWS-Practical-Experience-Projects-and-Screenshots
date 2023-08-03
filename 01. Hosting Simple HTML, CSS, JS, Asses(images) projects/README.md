@@ -10,7 +10,8 @@
 
 1. https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html
 2. Deploying Static HTML website onto AWS || AMAZON WEB SERVICES || Deploy html page to aws ||#AWS#HTML - https://www.youtube.com/watch?v=_ris1LYN_fk
-3. 
+3. https://www.youtube.com/watch?v=PNdfMf2EgY0&list=PLqlIZrzx2pgBaj9MbTxWt45jo4cJUIIJx&index=9
+4. https://www.youtube.com/watch?v=Islmm-LMu38
 
 - By contrast, a dynamic website relies on server-side processing, including server-side scripts, such as PHP, JSP, or ASP.NET. Amazon S3 does not support server-side scripting, but AWS has other resources for hosting dynamic websites You can use Amazon S3 to host a static website. On a static website, individual webpages include static content. They might also contain client-side scripts.
 
