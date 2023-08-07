@@ -1,4 +1,4 @@
-# Screenshots (WAIT FOR LOADING GIF files) - 
+# Screenshots (WAIT FOR LOADING 6-7 GIF files) - 
 
 <img src="./Screenshots/ss1.gif" alt="ec2_vm_instance_created_and_connected_via_PuTTY">
 <img src="./Screenshots/ss2.PNG" alt="ec2_vm_instance_installed_git">
@@ -20,4 +20,6 @@
 
 1. Host MERN app on EC2 - https://www.youtube.com/watch?v=xQshKLy0K4M , https://petri.com/install-git-ubuntu , https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/ 
 2. ChatGPT😉
+
+Elastic ip address - reamins same after stopping and restarting the VM, it have it's own charges. Elastic address is ipv4, not ipv6 and you can use it to connect to your instance, whereas public ip address will keep on changing.
 
