@@ -6,11 +6,6 @@
 # What we did - 
 
 
-# Resources - 
-
-1. 
-
-
 
 - User: hey, i am learning aws, can i use aws serverless to create an application that have simple ui (namefield, datefield) and then run cron jobs every 1 hour to see if today is that person's borthday or not, if it is his birthday, send me on whatsapp channel about it.  
 
@@ -63,10 +58,17 @@ Since Lambda continues to evolve, there might be additional languages supported 
 
 # Resources - 
 
-1. [Python] Build a CRUD Serverless API with AWS Lambda, API Gateway and a DynamoDB from Scratch - https://www.youtube.com/watch?v=9eHh946qTIk&ab_channel=FelixYu
+1. [Python] Build a CRUD Serverless API with AWS Lambda, API Gateway and a DynamoDB from Scratch - https://www.youtube.com/watch?v=9eHh946qTIk&ab_channel=FelixYu and API Authentication via API Keys | AWS API Gateway - https://www.youtube.com/watch?v=V-ac_ZvdAW4&ab_channel=FelixYu
 
-2. API Authentication via API Keys | AWS API Gateway - https://www.youtube.com/watch?v=V-ac_ZvdAW4&ab_channel=FelixYu
+2. AWS API Gateway to Lambda Tutorial in Python | Build a REST API - https://www.youtube.com/watch?v=uFsaiEhr1zs&ab_channel=BeABetterDev
 
+3. https://www.youtube.com/watch?v=mQov1eetSec&ab_channel=ListenToLearn
+
+4. DynamoDB Python GET | PUT | DELETE | SCAN | QUERY Boto3 Tutorial - https://www.youtube.com/watch?v=Al1xwYhQ-BM&ab_channel=SoumilShah
+
+5. https://www.youtube.com/watch?v=vXiZO1c5Sk0&ab_channel=BeABetterDev
+
+6. Schedule AWS Lambda Functions Using EventBridge and CloudWatch - https://www.youtube.com/watch?v=-ResiAcM8pg&ab_channel=AjayWadhara
 
 
 
