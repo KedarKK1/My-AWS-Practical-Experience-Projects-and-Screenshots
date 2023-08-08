@@ -1,0 +1,118 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Reminder App</title>
+    <!-- bootstrap cdn & bootstrap-js cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        // fetch all bd list
+        fetch('https://fu6ykexjdh.execute-api.eu-north-1.amazonaws.com/prod/getallbds')
+            .then(response => {
+                if(!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json()
+            }).then(data => {
+                // console.log("Data ", data);
+                const birthdayList = document.getElementById('allBdList');
+                
+                birthdayList.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching birthday list:', error);
+            });
+
+        // fetch all today's bd list
+        fetch('https://fu6ykexjdh.execute-api.eu-north-1.amazonaws.com/prod/gettodaysbirthdays')
+            .then(response => {
+                if(!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json()
+            }).then(data => {
+                // console.log("Data ", data);
+                const birthdayList = document.getElementById('todaysBdList');
+                
+                birthdayList.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching birthday list:', error);
+            });
+
+        
+    </script>
+
+<body class="container-fluid">
+
+    <h1 align="center" class="my-2"><u>Birthday Reminder App</u></h1>
+
+    <form class="border p-2" align="center">
+        <div class="my-2">
+            <label for="nameFieldId">Enter Name: </label>
+            <input id="nameFieldId" class="nameFieldId" name="nameFieldId" type="text" placeholder="Name of person">
+        </div>
+        <div class="my-2">
+            <label for="dateFieldId">Enter DBO: </label>
+            <input id="dateFieldId" class="dateFieldId" name="dateFieldId" type="date" placeholder="DOB">
+        </div>
+        <button id="submitFieldId" placeholder="Submit" class="btn btn-primary">
+        submit </button>
+        <input id="resetFieldId" type="reset" class="btn btn-primary">
+
+    </form>
+
+    <div class="row w-100">
+        <div class="col-sm-12 col-md-6 border border-right-2">
+            <h2>Today's Birthday List</h2>
+            <br>
+
+            <div id="todaysBdList"></div>
+        </div>
+        <div class="col-sm-12 col-md-6 border border-left-2">
+            <h2>All Birthday List</h2>
+            <br>
+
+            <div id="allBdList"></div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        // add new birthdays
+        document.getElementById("submitFieldId").addEventListener("click", function(e){
+            e.preventDefault();
+            const url = 'https://fu6ykexjdh.execute-api.eu-north-1.amazonaws.com/prod/createbdentry';
+
+            let oldDOB = document.getElementById('dateFieldId').value;
+            oldDOB = oldDOB.split('-');
+            let dateFieldId = `${oldDOB[2]}-${oldDOB[1]}-${oldDOB[0]}`
+            console.log("dateFieldId ", dateFieldId)
+            // Replace this with the data you want to send in the request body
+            let data22 = {
+            nameFieldId: document.getElementById('nameFieldId').value,
+            dateFieldId: dateFieldId
+            };
+
+            // console.log("data22 ", JSON.stringify(data22));
+
+            fetch(url, { 
+                method: "POST", 
+                headers: {"Content-Type": "application/json",},          
+                body: JSON.stringify(data22),
+                redirect: 'follow'
+            }).then(response => response.text())
+            .then(result => {
+                console.log(result);
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error fetching birthday list:', error);
+            });
+
+        })
+    </script>
+
+
+</body></html>
