@@ -26,8 +26,15 @@ Link - https://clipchamp.com/watch/Iuuqu75ZzqQ
 <div style="position:relative;width:fit-content;height:fit-content;">
             <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/Iuuqu75ZzqQ?utm_source=embed&utm_medium=embed&utm_campaign=watch">
                 <img loading="lazy" style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
-            </a><iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/Iuuqu75ZzqQ/embed" width="640" height="360"></iframe>
+            </a>
+            <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/Iuuqu75ZzqQ/embed" width="640" height="360"></iframe>
 </div>
+
+|                         Statement                         |          Demonstration Links         | Folder Associated |
+|:---------------------------------------------------------:|:------------------------------------:|:-----------------:|
+|               Hosting Static file on AWS S3 Bucket        | [Link](https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots/tree/main/01.%20Hosting%20Simple%20HTML%2C%20CSS%2C%20JS%2C%20Asses(images)%20projects) |     Folder & Screenshots    |
+|   Hosting Full-stack MERN application with AWS EC2 instance | [Link](https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots/tree/main/02.%20Hosting%20Full-stack%20MERN%20application) |        Folder & Screenshots       |
+| Birthday Reminder App with Email Automated                  | [Link](https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots/tree/main/03.%20Serverless%20Lambda%2C%20CloudWatch%2C%20DynamoDB%2C%20S3%2C%20SES%2C%20EventBridge%20Scheduler%20application) |        Folder and Video Explaination       |
 
 # Show your support
 

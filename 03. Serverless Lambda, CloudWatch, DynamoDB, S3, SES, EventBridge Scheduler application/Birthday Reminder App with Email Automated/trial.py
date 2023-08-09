@@ -115,20 +115,17 @@ def lambda_handler(event, context):
                 if(today == item['dobField']):
                     ans.append(item)
 
-            if(len(ans) > 0):
+            client = boto3.client("ses")
+            subject = ("Today's birthday list")
+            body = "Test body from lambda" + json.dumps(ans)
+            message = {"Subject": {"Data": subject}, "Body": {"Html": {"Data": body}}}
+            response = client.send_email(Source="officialkedark1@gmail.com", Destination={"ToAddresses": ["officialkedark1@gmail.com"]}, Message=message)
 
-                client = boto3.client("ses")
-                subject = ("Today's birthday list")
-                body = "Test body from lambda" + json.dumps(ans)
-                message = {"Subject": {"Data": subject},
-                        "Body": {"Html": {"Data": body}}}
-                response = client.send_email(Source="officialkedark1@gmail.com", Destination={"ToAddresses": ["officialkedark1@gmail.com"]}, Message=message)
+            response2 = buildResponse(200, f"Lambda executed successfully  {json.dumps(ans)} & {json.dumps(response)}")
+            return response2
 
-                response2 = buildResponse(200, f"Lambda executed successfully  {json.dumps(ans)} & {json.dumps(response)}")
-                return response2
-
-            response = buildResponse(200, f"Lambda executed successfully {path} {httpMethod}")
-            return response
+            # response = buildResponse(200, f"Lambda executed successfully {path} {httpMethod}")
+            # return response
 
     except Exception as err:
         response = buildResponse(500, f'Lambda encountered an error: {str(err)}')
@@ -139,15 +136,11 @@ def lambda_handler(event, context):
 #     # Set up SNS client
 #     sns_client = boto3.client('sns')
 
-#     # Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp number, including the country code.
-#     # Note: WhatsApp numbers need to be in the format 'whatsapp:+<country_code><phone_number>'
+#     # Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp number, including the country code. # Note: WhatsApp numbers need to be in the format 'whatsapp:+<country_code><phone_number>'
 #     phone_number = 'whatsapp:+9195#90##14#'
 
 #     # Construct the message
 #     message = f"Today is {name}'s birthday! Date of Birth: {dob}"
 
 #     # Send the message using Amazon SNS
-#     sns_client.publish(
-#         PhoneNumber=phone_number,
-#         Message=message
-#     )
+#     sns_client.publish( PhoneNumber=phone_number, Message=message )
