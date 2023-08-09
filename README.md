@@ -4,6 +4,10 @@ This is repo made for showing my AWS Practical Experience - Projects Activity & 
 
 # Visit Each folder above & goto their README.md to see Screenshots of my projects
 
+# Architecture -
+
+<img src="./03. Serverless Lambda, CloudWatch, DynamoDB, S3, SES, EventBridge Scheduler application/Screenshots/Architecture5.png" alt="Cloud Architecture"> <br />
+
 # Used AWS-services:
 
 <b>
