@@ -32,9 +32,9 @@ Link - https://clipchamp.com/watch/Iuuqu75ZzqQ
 
 |                         Statement                         |          Demonstration Links         | Folder Associated |
 |:---------------------------------------------------------:|:------------------------------------:|:-----------------:|
-|               Hosting Static file on AWS S3 Bucket        | [Link](https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots/tree/main/01.%20Hosting%20Simple%20HTML%2C%20CSS%2C%20JS%2C%20Asses(images)%20projects) |     Folder & Screenshots    |
-|   Hosting Full-stack MERN application with AWS EC2 instance | [Link](https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots/tree/main/02.%20Hosting%20Full-stack%20MERN%20application) |        Folder & Screenshots       |
-| Birthday Reminder App with Email Automated                  | [Link](https://github.com/KedarKK1/My-AWS-Practical-Experience-Projects-and-Screenshots/tree/main/03.%20Serverless%20Lambda%2C%20CloudWatch%2C%20DynamoDB%2C%20S3%2C%20SES%2C%20EventBridge%20Scheduler%20application) |        Folder and Video Explaination       |
+|               Hosting Static file on AWS S3 Bucket        | [Link](./01.%20Hosting%20Simple%20HTML,%20CSS,%20JS,%20Asses(images)%20projects/) |     Folder & Screenshots    |
+|   Hosting Full-stack MERN application with AWS EC2 instance | [Link](02.%20Hosting%20Full-stack%20MERN%20application/) |        Folder & Screenshots       |
+| Birthday Reminder App with Email Automation                  | [Link](./03.%20Serverless%20Lambda,%20CloudWatch,%20DynamoDB,%20S3,%20SES,%20EventBridge%20Scheduler%20application/) |        Folder and Video Explaination       |
 
 # Show your support
 
