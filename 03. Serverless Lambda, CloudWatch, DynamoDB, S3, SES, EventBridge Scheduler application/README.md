@@ -10,6 +10,8 @@ Link - https://clipchamp.com/watch/Iuuqu75ZzqQ
             <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/Iuuqu75ZzqQ/embed" width="640" height="360"></iframe>
 </div>
 
+<img src="./Screenshots/Architecture5.png" alt="Cloud Architecture"> <br />
+<img src="./Screenshots/Architecture6.png" alt="Cloud Architecture no text">
 <img src="./Screenshots/ss1.png" alt="s3 bucket static html files">
 <img src="./Screenshots/ss2.png" alt="s3 bucket static html file link">
 <img src="./Screenshots/ss3.png" alt="deployed static website for interacting with Lambda function via rest API, eg. getting all bds list, getting todays bds list and adding new bd">
