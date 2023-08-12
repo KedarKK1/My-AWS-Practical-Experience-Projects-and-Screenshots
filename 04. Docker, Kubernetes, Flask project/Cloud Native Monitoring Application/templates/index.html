@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloud Native System Monitoring App</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .plotly-graph-div {
+            margin: auto;
+            width: 50%;
+            background-color: rgba(151, 128, 128, 0.688);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>System Monitoring</h1>
+
+        <div id="cpu-gauge"></div>
+
+        <div id="mem-gauge"></div>
+
+        <div id="cpu-number"></div>
+
+        <div id="cpu-freq"></div>
+
+        {% if cpu_stats %}
+        <h3 class="alert alert-danger">CPU Stats: {{ cpu_stats }}</h3>
+        {% endif %}
+
+        {% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+        {% endif %}
+
+    </div>
+    <script>
+        
+        var cpuGauge = {
+            type: "indicator",
+            mode: "gauge+number",
+            value: {{ cpu_percent }},
+            gauge: {
+                axis: { range: [null, 100] },
+                bar: { color: "#1f77b4" },
+                bgcolor: "white",
+                borderwidth: 2,
+                bordercolor: "#ccc",
+                steps: [
+                    { range: [0, 50], color: "#d9f0a3" },
+                    { range: [50, 85], color: "#ffeb84" },
+                    { range: [85, 100], color: "#ff5f5f" }
+                ],
+                threshold: {
+                    line: { color: "red", width: 4 },
+                    thickness: 0.75,
+                    value: {{ cpu_percent }}
+                }
+            }
+        };
+        
+        var memGauge = {
+            type: "indicator",
+            mode: "gauge+number",
+            value: {{ mem_percent }},
+            gauge: {
+                axis: { range: [null, 100] },
+                bar: { color: "#1f77b4" },
+                bgcolor: "white",
+                borderwidth: 2,
+                bordercolor: "#ccc",
+                steps: [
+                    { range: [0, 50], color: "#d9f0a3" },
+                    { range: [50, 85], color: "#ffeb84" },
+                    { range: [85, 100], color: "#ff5f5f" }
+                ],
+                threshold: {
+                    line: { color: "red", width: 4 },
+                    thickness: 0.75,
+                    value: {{ mem_percent }}
+                }
+            }
+        };
+
+        var cpuNumber = {
+            type: 'bar',
+            x: ['Logical', 'Physical'],
+            y: [{{ cpu_count }}, {{ physical_cpu_count }}],
+            marker: {
+                color: ['#1f77b4', '#ff7f0e']
+            }
+        };
+
+        var cpuFreq ={
+            type: 'bar',
+            // x: Array.from({ length: cpu_count }, (_, i) => `CPU ${i + 1}`),
+            x: [2],
+            y: [{{ cpu_freq.current }}, {{ cpu_freq.current }}],
+            marker: {
+                color: '#1f77b4'
+            }
+        }
+        
+        var cpuGaugeLayout = { title: "CPU Utilization" };
+        var memGaugeLayout = { title: "Memory Utilization" };
+        var cpuNumberLayout = { title: "CPU Numbers: Logical & Physical"};
+        var cpuFreqLayout = {title: "CPU Frequency",
+        yaxis: {
+            title: 'Frequency (GHz)',
+            range: [{{ cpu_freq.min }}, {{ cpu_freq.max }}] // Adjust the range as needed
+        }
+        };
+        
+        Plotly.newPlot('cpu-gauge', [cpuGauge], cpuGaugeLayout);
+        Plotly.newPlot('mem-gauge', [memGauge], memGaugeLayout);
+        Plotly.newPlot('cpu-number', [cpuNumber], cpuNumberLayout);
+        Plotly.newPlot('cpu-freq', [cpuFreq], cpuFreqLayout);
+    </script>
+</body>
+</html>
