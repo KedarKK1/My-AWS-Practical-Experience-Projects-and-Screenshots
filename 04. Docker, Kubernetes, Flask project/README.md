@@ -11,6 +11,7 @@
 <img src="./Screenshots/ss11.png" alt="created aws resources: ecr using boto3 commands!">
 <img src="./Screenshots/ss12.png" alt="aws ecr commands!">
 <img src="./Screenshots/ss14.png" alt="pushed docker image to ecr!">
+<img src="./Screenshots/ss16.png" alt="pushed docker image to aws ecr!">
 
 ## Resources -
 
