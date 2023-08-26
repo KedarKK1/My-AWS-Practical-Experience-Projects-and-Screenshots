@@ -6,14 +6,20 @@
 2. sort, filter functionality
    <img src="./Screenshots/ss2.gif" alt="sort, filter functionality">
 
-3. Add task functionality
-   <img src="./Screenshots/ss3.gif" alt="Add task functionality">
+<!-- 3. Add task functionality
+   <img src="./Screenshots/ss3.gif" alt="Add task functionality"> -->
 
-4. edit task functionality
-   <img src="./Screenshots/ss4.gif" alt="edit task functionality">
+<!-- 4. edit task functionality
+   <img src="./Screenshots/ss4.gif" alt="edit task functionality"> -->
 
-5. Delete task functionality
-   <img src="./Screenshots/ss5.gif" alt="delete task functionality">
+<!-- 5. Delete task functionality
+   <img src="./Screenshots/ss5.gif" alt="delete task functionality"> -->
+
+3. Delete task functionality
+   <img src="./Screenshots/ss10.PNG" alt="RDS Connection set">
+
+4. Delete task functionality
+   <img src="./Screenshots/ss16.PNG" alt="RDS Connection MySQL Workbench">
 
 ### Manage inbound rules of VPC (Virtual Private Cloud) after setting up the AWS RDS
 
