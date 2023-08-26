@@ -2,6 +2,16 @@
 
 <img src="./Screenshots/ss1.PNG" alt="Running psutil on Windows local machine, working"> <br />
 <img src="./Screenshots/ss3.png" alt="PyPlot Graphs added successfully!">
+<img src="./Screenshots/ss4.png" alt="Docker container created successfully!">
+<img src="./Screenshots/ss5.png" alt="Docker installing pakcages successfully!">
+<img src="./Screenshots/ss6.png" alt="Docker setting done!">
+<img src="./Screenshots/ss7.png" alt="Docker container running successfully!">
+<img src="./Screenshots/ss8.png" alt="aws ecr created!">
+<img src="./Screenshots/ss10.png" alt="aws ecr commands!">
+<img src="./Screenshots/ss11.png" alt="created aws resources: ecr using boto3 commands!">
+<img src="./Screenshots/ss12.png" alt="aws ecr commands!">
+<img src="./Screenshots/ss14.png" alt="pushed docker image to ecr!">
+<img src="./Screenshots/ss16.png" alt="pushed docker image to aws ecr!">
 
 ## Resources -
 

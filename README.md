@@ -38,7 +38,8 @@ Link - https://clipchamp.com/watch/Iuuqu75ZzqQ
 |:---------------------------------------------------------:|:------------------------------------:|:-----------------:|
 |               Hosting Static file on AWS S3 Bucket        | [Link](./01.%20Hosting%20Simple%20HTML,%20CSS,%20JS,%20Asses(images)%20projects/) |     Folder & Screenshots    |
 |   Hosting Full-stack MERN application with AWS EC2 instance | [Link](02.%20Hosting%20Full-stack%20MERN%20application/) |        Folder & Screenshots       |
-| Birthday Reminder App with Email Automation                  | [Link](./03.%20Serverless%20Lambda,%20CloudWatch,%20DynamoDB,%20S3,%20SES,%20EventBridge%20Scheduler%20application/) |        Folder and Video Explaination       |
+| Birthday Reminder App with Email Automation                  | [Link](./03.%20Serverless%20Lambda,%20CloudWatch,%20DynamoDB,%20S3,%20SES,%20EventBridge%20Scheduler%20application/) |        Folder, SS and Video Explaination       |
+| 04. Docker, Kubernetes, Flask project | [Link](./04.%20Docker%2C%20Kubernetes%2C%20Flask%20project/) | Folder & Screenshots |
 
 # Show your support
 
